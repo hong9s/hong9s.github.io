@@ -14,8 +14,8 @@
         document.payInit.submit();
     })
 </script>
-<form name="payInit" action="http://lgretailservice.ml:8080/Pay.jsp" method="post">
-  <input type="hidden" name="payMethod" value="vacnt">
+<form name="payInit" action="http://lgretailservice.ml/Pay.jsp" method="post">
+  <input type="hidden" name="payMethod" value="card">
   <input type="hidden" name="goodsNm" value="$goodsNm">
   <input type="hidden" name="ordNo" value="$ordNo">
   <input type="hidden" name="goodsAmt" value="$goodsAmt">
@@ -26,7 +26,7 @@
   <input type="hidden" name="returnUrl" value="$returnUrl">
   <input type="hidden" name="mid" value="$merchantID">
 
-  <input type="hidden" name="trxCd" value="1">
+  <input type="hidden" name="trxCd" value="0">
   <input type="hidden" name="userIp"	value="0:0:0:0:0:0:0:1">
   <input type="hidden" name="mbsUsrId" value="user1234">
   <input type="hidden" name="ordGuardEmail" value="">
