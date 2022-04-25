@@ -74762,7 +74762,7 @@ h=h.u(0,g==null?A.m():g)
 g=s.gv()
 f=s.x
 g=g.u(0,f==null?A.m():f)
-i=A.asI(A.oh(!1,!0,A.aI(c,A.yl("/img/thumbnail_game.png",B.ma,c),B.j,c,c,c,c,g.b*0.15,c,c,c,c,h.a*0.4),c,!0,c,c,c,c,c,c,c,c,c,new A.a5I(),c,c,c),B.cR,10,c,new A.d0(i,B.v))
+i=A.asI(A.oh(!1,!0,A.aI(c,A.yl("assets/img/thumbnail_game.png",B.ma,c),B.j,c,c,c,c,g.b*0.15,c,c,c,c,h.a*0.4),c,!0,c,c,c,c,c,c,c,c,c,new A.a5I(),c,c,c),B.cR,10,c,new A.d0(i,B.v))
 h=s.gv()
 g=s.x
 h=A.aF(c,h.u(0,g==null?A.m():g).b*0.01,c)
@@ -74776,7 +74776,7 @@ g=g.u(0,f==null?A.m():f)
 f=s.gv()
 e=s.x
 f=f.u(0,e==null?A.m():e)
-h=A.asI(A.oh(!1,!0,A.aI(c,A.yl("/img/thumbnail_memo.png",B.ma,c),B.j,c,c,c,c,f.b*0.15,c,c,c,c,g.a*0.4),c,!0,c,c,c,c,c,c,c,c,c,new A.a5J(),c,c,c),B.cR,10,c,new A.d0(h,B.v))
+h=A.asI(A.oh(!1,!0,A.aI(c,A.yl("assets/img/thumbnail_memo.png",B.ma,c),B.j,c,c,c,c,f.b*0.15,c,c,c,c,g.a*0.4),c,!0,c,c,c,c,c,c,c,c,c,new A.a5J(),c,c,c),B.cR,10,c,new A.d0(h,B.v))
 g=s.gv()
 f=s.x
 g=A.aF(c,g.u(0,f==null?A.m():f).b*0.01,c)
