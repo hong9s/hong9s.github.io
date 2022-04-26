@@ -4,9 +4,9 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "01b6b6f6ebd57a4149f2687ba00e7894",
-"index.html": "4deddd06bfe9dc3d004057f4c80dc154",
-"/": "4deddd06bfe9dc3d004057f4c80dc154",
-"main.dart.js": "e83d970216bc1f970dbb2cfc922e7573",
+"index.html": "0b8fa867e8adb04918f2b9b5a2016c25",
+"/": "0b8fa867e8adb04918f2b9b5a2016c25",
+"main.dart.js": "f5a148d092e6535cc2676634cca68364",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
@@ -18,7 +18,7 @@ const RESOURCES = {
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
 "assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
 "assets/assets/web/game.html": "168e411ced5ca5f01e8a1459406b55e8",
-"assets/assets/web/pay_init.html": "ffb340965310a66008ecf79d2bff2d73",
+"assets/assets/web/pay_init.html": "da17927f045bd559aeb8c462b3aeddeb",
 "assets/assets/img/thumbnail_game.png": "a67da63584b787be9b26ede1e6aafac4",
 "assets/assets/img/logo.png": "91617eda733ebd6d85cd98e3a0790812",
 "assets/assets/img/thumbnail_memo.png": "53b2ec0bdd7a0cd126dec7b7bb527168",
