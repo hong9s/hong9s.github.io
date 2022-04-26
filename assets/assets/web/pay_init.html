@@ -14,7 +14,7 @@
     document.payInit.submit();
   })
 </script>
-<form name="payInit" action="http://52.79.248.80:8080/payCertification.jsp" method="post">
+<form name="payInit" action="https://ia1lqox2e8.execute-api.ap-northeast-2.amazonaws.com/dev/pay/auth" method="post">
   <input type="hidden" name="payMethod" value="$payMethod">
   <input type="hidden" name="goodsNm" value="$goodsNm">
   <input type="hidden" name="ordNo" value="$ordNo">
