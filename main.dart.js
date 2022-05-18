@@ -78456,7 +78456,7 @@ s=this.ax
 return r+(s.gjy(s).length!==0?"?"+s.gjy(s):"")},
 gTp(){var s=this.ax.gST().h(0,"tableNo")
 return s==null?"0":s},
-gmg(){var s=this.ax,r=s.gjw().length===0?"1":s.gjw()[1]
+gmg(){var s=this.ax,r=s.gjw().length===0?"10000001-LG000001":s.gjw()[1]
 A.bY("storeId: "+r)
 return r}}
 A.amL.prototype={
