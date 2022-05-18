@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
+<title>Retail Service</title>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+</script>
+</head>
+<body>
+결제 인증 진행 중 입니다.
+<script type="text/javascript">
+  $(document).ready(function(){
+    document.payInit.submit();
+  })
+</script>
+<form name="payInit" action="https://ia1lqox2e8.execute-api.ap-northeast-2.amazonaws.com/dev/pay/auth" method="post">
+  <input type="hidden" name="CD_HEAD" value="$CD_HEAD">
+  <input type="hidden" name="CD_STORE" value="$CD_STORE">
+  <input type="hidden" name="NO_TABLE" value="$NO_TABLE">
+  <input type="hidden" name="DS_ORDER" value="$DS_ORDER">
+  <input type="hidden" name="payMethod" value="$payMethod">
+  <input type="hidden" name="goodsNm" value="$goodsNm">
+  <input type="hidden" name="ordNo" value="$ordNo">
+  <input type="hidden" name="goodsAmt" value="$goodsAmt">
+  <input type="hidden" name="ordNm" value="$ordNm">
+  <input type="hidden" name="ordTel" value="$ordTel">
+  <input type="hidden" name="ordEmail" value="$ordEmail">
+  <input type="hidden" name="merchantKey" value="$merchantKey">
+  <input type="hidden" name="returnUrl" value="$returnUrl">
+  <input type="hidden" name="mid" value="$merchantID">
+
+  <input type="hidden" name="trxCd" value="$trxCd">
+  <input type="hidden" name="userIp"	value="0:0:0:0:0:0:0:1">
+  <input type="hidden" name="mbsUsrId" value="user1234">
+  <input type="hidden" name="ordGuardEmail" value="">
+  <input type="hidden" name="rcvrAddr" value="서울특별시">
+  <input type="hidden" name="rcvrPost" value="00100">
+  <input type="hidden" name="mbsIp" value="127.0.0.1">
+  <input type="hidden" name="mbsReserved" value="MallReserved"><!-- 상점 예약필드 -->
+  <input type="hidden" name="rcvrMsg" value="rcvrMsg">
+  <input type="hidden" name="goodsSplAmt" value="0">
+  <input type="hidden" name="goodsVat" value="0">
+  <input type="hidden" name="goodsSvsAmt" value="0">
+  <input type="hidden" name="payReqType" value="1">
+  <input type="hidden" name="model" value="WEB">
+  <input type="hidden" name="charSet" value="UTF-8">
+  <!-- <input type="hidden" name="period" value="별도 제공기간없음"> -->
+  <!-- <input type="hidden" name="billHpFlg" value="0"> -->
+  <!-- <input type="hidden" name="model" value="MOB"> -->
+  <!-- <input type="hidden" name="channel" value="0001"> -->
+</form>
+</body>
+</html>
