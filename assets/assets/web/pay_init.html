@@ -9,46 +9,38 @@
 </head>
 <body>
 결제 인증 진행 중 입니다.
-<script type="text/javascript">
-  $(document).ready(function(){
-    document.payInit.submit();
-  })
-</script>
-<form name="payInit" action="https://ia1lqox2e8.execute-api.ap-northeast-2.amazonaws.com/dev/pay/auth" method="post">
-  <input type="hidden" name="CD_HEAD" value="$CD_HEAD">
-  <input type="hidden" name="CD_STORE" value="$CD_STORE">
-  <input type="hidden" name="NO_TABLE" value="$NO_TABLE">
-  <input type="hidden" name="DS_ORDER" value="$DS_ORDER">
-  <input type="hidden" name="payMethod" value="$payMethod">
-  <input type="hidden" name="goodsNm" value="$goodsNm">
-  <input type="hidden" name="ordNo" value="$ordNo">
-  <input type="hidden" name="goodsAmt" value="$goodsAmt">
-  <input type="hidden" name="ordNm" value="$ordNm">
-  <input type="hidden" name="ordTel" value="$ordTel">
-  <input type="hidden" name="ordEmail" value="$ordEmail">
-  <input type="hidden" name="merchantKey" value="$merchantKey">
-  <input type="hidden" name="returnUrl" value="$returnUrl">
-  <input type="hidden" name="mid" value="$merchantID">
+<div id="kispg"></div>
 
-  <input type="hidden" name="trxCd" value="$trxCd">
-  <input type="hidden" name="userIp"	value="0:0:0:0:0:0:0:1">
-  <input type="hidden" name="mbsUsrId" value="user1234">
-  <input type="hidden" name="ordGuardEmail" value="">
-  <input type="hidden" name="rcvrAddr" value="서울특별시">
-  <input type="hidden" name="rcvrPost" value="00100">
-  <input type="hidden" name="mbsIp" value="127.0.0.1">
-  <input type="hidden" name="mbsReserved" value="MallReserved"><!-- 상점 예약필드 -->
-  <input type="hidden" name="rcvrMsg" value="rcvrMsg">
-  <input type="hidden" name="goodsSplAmt" value="0">
-  <input type="hidden" name="goodsVat" value="0">
-  <input type="hidden" name="goodsSvsAmt" value="0">
-  <input type="hidden" name="payReqType" value="1">
-  <input type="hidden" name="model" value="WEB">
-  <input type="hidden" name="charSet" value="UTF-8">
-  <!-- <input type="hidden" name="period" value="별도 제공기간없음"> -->
-  <!-- <input type="hidden" name="billHpFlg" value="0"> -->
-  <!-- <input type="hidden" name="model" value="MOB"> -->
-  <!-- <input type="hidden" name="channel" value="0001"> -->
-</form>
+<script type="text/javascript">
+  window.addEventListener('message', returnData, false);
+
+  $(document).ready(function(){
+    let PAYMENT_DB = JSON.stringify({"CD_HEAD":"$CD_HEAD","CD_STORE":"$CD_STORE","NO_TABLE":"$NO_TABLE","DS_ORDER":"$DS_ORDER","DS_STATUS":"O"});
+    let PG_DATA = JSON.stringify({"payMethod":"card","goodsNm":"$goodsNm","ordNo":"$ordNo","goodsAmt":"$goodsAmt","goodsSplAmt":"$goodsSplAmt","goodsVat":"$goodsVat","goodsSvsAmt":"0","ordNm":"$ordNm",
+        "ordTel":"$ordTel","ordEmail":"","merchantKey":"$merchantKey","returnUrl":"$returnUrl","mid":"$merchantID","trxCd":"0",
+        "userIp":"0:0:0:0:0:0:0:1","mbsUsrId":"user1234","ordGuardEmail":"","rcvrAddr":"서울특별시","rcvrPost":"00100","mbsIp":"127.0.0.1",
+        "mbsReserved":"MallReserved","rcvrMsg":"rcvrMsg","payReqType":"1","model":"WEB","charSet":"UTF-8"});
+    let data = { PAYMENT_DB, PG_DATA };
+
+    $.ajax({
+      type: 'post',
+      url: '$actionUrl',
+      data: data,
+      dataType: 'html',
+      success: function(data) {
+        $('#kispg').html(data);
+      },
+      error: function(err) {
+        console.log('pg post error');
+        window.parent.postMessage('Success', '*');
+        webToAppChange.postMessage('Success');
+      }
+    });
+  })
+
+  function returnData(e) {
+    console.log('e: ', );
+  }
+</script>
 </body>
 </html>
